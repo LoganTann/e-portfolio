@@ -16,6 +16,7 @@ function openMenu(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+  console.log("hello world");
   const toggleMenu = document.getElementById("menu-toggle");
   const view = document.getElementById("view");
   toggleMenu.addEventListener("click", openMenu);
