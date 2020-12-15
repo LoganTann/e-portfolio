@@ -1,5 +1,89 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  perspective: 1500px; /* utile pour l'animation du menu*/
+  background: rgb(170,105,13);
+  background: linear-gradient(200deg, #aa690d 0%, #8d2a00 60%, #570b04 100%);
+}
+/* timing transition général */
+#menu-toggle {
+  transition: all 0.5s;
+}
+#view, nav li {
+  transition: all 0.4s;
+}
+
+/* effet du menu */
+#view {
+  background-color: white;
+  /* force la vue à avoir l'ascenceur plutôt que la balise body : */
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+  top: 0; left: 0;
+  z-index: 2;
+  /* ptite touche finale*/
+  scroll-behavior: smooth;
+}
+#menu-toggle {
+  position: fixed;
+  z-index: 3;
+  top: 1em;
+  right: 4em;
+  padding: 1.25rem 1.5rem;
+  background: #363636;
+  color: white;
+}
+body.openMenu #view {
+  transform: translateZ(-1800px) translateX(-50%) rotateY(45deg) scale(1);
+  cursor: pointer;
+  filter: blur(5px);
+}
+body.openMenu #view:hover {
+  filter: blur(1px);
+  transform: translateZ(-1800px) translateX(-50%) rotateY(45deg) scale(0.9);
+}
+body.openMenu #menu-toggle {
+  /* on le fais sortir de l'écran le bouton menu*/
+  top: 0em;
+  transform: translateY(-100%);
+}
+nav ul {
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  font-size: 3.5rem;
+}
+nav li li {
+  font-size: 0.5em; /* un peu plus petit que le parent*/
+}
+nav li a {
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', 'Source Sans Pro', sans-serif;
+  color: white;
+  padding: 0 1.5rem;
+}
+nav li:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+nav li:hover a {
+  color: white;
+  text-decoration: none;
+}
+nav>ul>li {
+  margin-bottom: 0.5rem;
+}
+nav>ul>li:hover { /* ne pas appliquer le upscale sur les sous-listes */
+  transform: scale(1.1);
+}
+/* spécialement pour les écrans plus petits que 900px */
+@media (max-width: 600px) {
+  nav li {
+    font-size: 2rem;
+  }
+  body.openMenu nav {
+    right: 1em;
+  }
 }
 
 /* Header */
@@ -43,12 +127,10 @@ h3 {
 }
 
 nav {
-  display: none;
-}
-#menu-toggle {
-  position: fixed;
-  top: 1em;
-  left: 1em;
+  z-index: 1;
+  position: absolute;
+  top: 16%;
+  right: 10vw;
 }
 
 section {
