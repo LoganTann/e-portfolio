@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="webfonts/font-awesome-all.css">
     <!-- <link rel="stylesheet" href="fonts/simple-line-icons.min.css"> -->
 
     <!-- Code custom -->
@@ -59,11 +59,11 @@
         </div>
     </section>
 
-    <section id="technos" class="content-section bg-primary text-white">
+    <section id="technos" class="content-section text-white">
         <div class="container">
             <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">Skills -> A DEPLACER DANS COMPETANCES et REMPLACER ça PAR UN LIEN VERS CETTE PAGE</h3>
-                <h2 class="mb-5">Mes 4 domaines prédominants</h2>
+                <h3>Skills -> A DEPLACER DANS COMPETANCES et REMPLACER ça PAR UN LIEN VERS CETTE PAGE</h3>
+                <h2 class="mb-5">Mes 4 compétences</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
@@ -99,7 +99,7 @@
 
     <section id="portfolio" class="container">
       <div class="content-section-heading text-center">
-          <h3 class="text-secondary">Quelques un de mes projets</h3>
+          <h3>Quelques un de mes projets</h3>
           <h2 class="mb-5">Portfolio</h2>
       </div>
       <div class="row align-items-center">
@@ -147,19 +147,72 @@
 
     <section id="contact" class="content-section bg-primary text-white">
       <div class="content-section-heading text-center">
-          <h3 class="text-secondary">Me contacter</h3>
+          <h3>Me contacter</h3>
           <h2 class="mb-5">Formlaire de contact</h2>
       </div>
-      <p>Le formulaire</p>
-      <form class="" action="" method="post">
-        <p>à faire</p>
+      <form class="container" action="mailto:logan@kagescan.fr" method="get" enctype="text/plain">
+        <div class="form-group row">
+          <div class="col-3 col-md-2">
+            <div class="custom-control custom-radio">
+              <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="Homme">
+              <label for="radio_0" class="custom-control-label">Monsieur</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="Femme">
+              <label for="radio_1" class="custom-control-label">Madame</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="Autre">
+              <label for="radio_2" class="custom-control-label">??</label>
+            </div>
+          </div>
+          <div class="col-8 col-md-5">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="prenom" placeholder="Votre prénom" type="text" class="form-control">
+          </div>
+          <div class="offset-3 offset-md-0 col-8 col-md-5">
+            <label for="name">Nom</label>
+            <input id="name" name="name" placeholder="Votre nom" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row align-items-center">
+          <label for="mail_content" class="col-3 col-md-2 col-form-label">Contenu de votre message</label>
+          <div class="col-9 col-md-10">
+            <textarea id="mail_content" name="mail_content" cols="40" rows="5" placeholder="Entrez votre message" class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="form-group row align-items-end">
+          <div class="col-9 offset-md-2 col-md-5">
+            <label for="mail" class="col-form-label">Votre e-mail</label>
+            <input id="mail" name="mail" placeholder="mail@exemple.com" type="text" class="form-control">
+          </div>
+          <div class="col-3 col-md-5 text-right">
+            <button name="submit" type="submit" class="btn btn-primary">Envoyer !</button>
+          </div>
+        </div>
       </form>
     </section>
 
-    <footer class="footer text-center">
-        <p>Ce projet a été conçu en tant que projet universitaire. Cette page web se doit donc de respecter le cahier des charges et certaines méthodes de développement.</p>
-
-        <a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a>
+    <footer class="footer row">
+      <div class="col-5 offset-3 col-md-3 offset-md-2">
+        <h3>Contact</h3>
+        <ul class="sansPuce">
+          <li><i class="fa fa-envelope mr-3"></i> logan@kagescan.fr</li>
+          <li><i class="fab fa-discord mr-3"></i> @ShinProg#2885</li>
+          <li><i class="fab fa-github mr-3"></i> <a href="https://github.com/LoganTann">LoganTann</a></li>
+          <li><i class="fab fa-youtube mr-3"></i> <a href="https://www.youtube.com/c/KagescanFr">/KagescanFr</a></li>
+        </ul>
+      </div>
+      <div class="col-8 offset-1 col-md-4">
+        <p>Ce site a été conçu en tant que projet universitaire. Cette page web se doit donc de respecter le cahier des charges et certaines méthodes de développement.</p>
+        <p class="text-center"><img src="img/u-paris-white.png" class="img-fluid" style="width: 300px;"></p>
+      </div>
+      <div class="col-12 text-center mt-3">
+        <a href="#header" title="Aller en haut de page"><i class="fa fa-angle-up"></i> Retourner en haut de la page <i class="fa fa-angle-up"></i></a>
+      </div>
+      <div class="col-12 text-center" id="copyright">
+        <p><i class="far fa-copyright"></i> 2020 Logan Tann. Source disponible sur <a href="https://github.com/LoganTann/e-portfolio">GitHub</a> (License MIT)</p>
+      </div>
     </footer>
 
   </div>

@@ -11,7 +11,9 @@ body {
 #view, nav li {
   transition: all 0.4s;
 }
-
+ul.sansPuce li, nav li {
+  list-style: none;
+}
 /* effet du menu */
 #view {
   background-color: white;
@@ -51,7 +53,6 @@ nav ul {
   padding: 0;
 }
 nav li {
-  list-style: none;
   font-size: 3.5rem;
 }
 nav li li {
@@ -100,30 +101,35 @@ header {
   align-items: center;
   justify-content: center;
 
-
-
   min-height: 30em;
 
   position: relative;
   width: 100%;
   height: auto;
   padding: 8rem 0;
-
 }
 
 h1, h2, h3 {
   font-weight: 700;
+}
+h2, h2 {
   margin-bottom: 3rem;
 }
-
 h1 {
   font-size: 3.5rem;
 }
 h3 {
+  font-size: 1rem;
+  color: #ecb807;
+  text-align: center;
+  text-transform: uppercase;
+}
+header h3 {
   font-size: 1.5rem;
   font-style: italic;
   width: 20em;
   max-width: 90vw;
+  color: inherit;
 }
 
 nav {
@@ -160,7 +166,24 @@ section {
   background: #363636;
   color: white;
 }
+#technos {
+  background-color: #1d809f;
+}
 
+/* obligation du .row pour définir priorité + importante par dessus bootstrap*/
+footer.row {
+  background-color: #363636;
+  color: white;
+  padding-top: 2em;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+#copyright {
+  padding-top: 1rem;
+  background-color: #2e2e2e;
+  margin-top: 1rem;
+}
 /* spécialement pour les écrans plus grand que 900px */
 @media (min-width: 900px) {
   header {
