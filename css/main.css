@@ -214,6 +214,24 @@ h4.card-body {
   margin: 0;
 }
 
+#smallerHeader {
+  height: 30em;
+}
+
+#page-competences header {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/competences.jpg');
+}
+#page-loisirs header {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/loisirs.jpg');
+}
+#page-experiences header {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/experience.png');
+}
+#page-experiences a[href="experiences.html"],
+#page-competences a[href="competences.html"],
+#page-loisirs a[href="loisirs.html"] {
+  font-weight: bold;
+}
 /* obligation du .row pour définir priorité + importante par dessus bootstrap*/
 footer.row {
   background-color: #363636;
