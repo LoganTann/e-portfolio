@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -67,22 +67,22 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <span class="mx-auto rounded-circle mb-3">a</span>
+                    <span class="icone"><i class="fas fa-server"></i></span>
                     <h4>Web backend</h4>
                     <p>J'ai pratiqué depuis de longues années le PHP, j'essaie donc de tenter mon aventure avec NodeJS assez récemment. Je m'intéresse depuis peu au concept de <em>serverless</em> avec la solution Firebase de Google Cloud.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <span class="mx-auto rounded-circle mb-3">a</span>
+                    <span class="icone"><i class="fas fa-drafting-compass"></i></span>
                     <h4>Web front-end</h4>
-                    <p>J'adore me contenter des dernières technologies web (Javascript ES6 et DOM moderne) mais je pratique aussi avec des librairies (Materialize, Monogatari, Bootstrap) et des frameworks (Vue.JS) selon les projets et ses spécifications.</p>
+                    <p>J'adore utiliser les technologies natives (dites "vanilla" tel que le JavaScript ES6 et DOM moderne) mais je pratique aussi avec des librairies (Materialize, Monogatari, Bootstrap) et des frameworks (Vue.JS) selon les projets et ses spécifications.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <span class="mx-auto rounded-circle mb-3">a</span>
+                    <span class="icone"><i class="fas fa-thumbs-up"></i></span>
                     <h4>Community Lead</h4>
                     <p>J'adore partager mes passion, et quoi de mieux qu'internet pour le faire ? Maintenir une communauté m'a permis non seulement garder une certaine motivation, mais aussi de pouvoir travailler avec une équipe et son organisation !</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <span class="mx-auto rounded-circle mb-3">a</span>
+                    <span class="icone"><i class="fas fa-icons"></i></span>
                     <h4>Infographie</h4>
                     <p>Maintenir une communauté m'a aussi permi d'approfondir ma maitrise infographique, en crééant des fantraductions sur divers supports par exemple. Je m'intéresse beaucoup au graphisme vectoriel et la possibilité de l'animer.</p>
                 </div>
@@ -90,49 +90,42 @@
         </div>
     </section>
 
-    <section>
-        <div class="container text-center">
-            <h2 class="mx-auto mb-5">Compétances</h2>
-            <a class="btn btn-primary btn-xl" role="button" href="#">COmpétences</a>
-        </div>
-    </section>
-
-    <section id="portfolio" class="container">
-      <div class="content-section-heading text-center">
-          <h3>Quelques un de mes projets</h3>
+    <section id="portfolio" class="container-fluid row justify-content-center">
+      <div class="col-12 content-section-heading text-center">
+          <h3>Mes projets préférés</h3>
           <h2 class="mb-5">Portfolio</h2>
       </div>
-      <div class="row align-items-center">
+      <div class="col-md-12 col-xl-8 row align-items-center">
+        <!-- Deux cartes dans cette colonne (pour affichage md)-->
         <div class="col-md-6">
           <!-- Nécessité de mettre la card DANS un col plutôt que de combiner en raison de pb d'affichages -->
-          <div class="card">
+          <div class="card bg-dark text-light">
             <a href="https://kagescan.fr/"><img class="card-img-top" src="https://kagescan.fr/res/img/banner1.jpg" alt="kagescan.fr banner"></a>
             <div class="card-body">
-              <h5 class="card-title"><a href="https://kagescan.fr/">Kagescan.fr</a></h1>
+              <h5 class="card-title"><a href="https://kagescan.fr/">Kagescan.fr</a></h5>
               <p class="card-text">
                 Site contenant l'ensemble des projets créés à l'occasion de la communauté au même nom, tel que des fan-traductions ou des pages explicatives.
-                Actuellement programmé en PHP et en arrêt de mise à jour depuis 2018, je compte le re-créer en Vue.JS dès février 2021</p>
+                Actuellement programmé en PHP et en arrêt de mise à jour depuis 2018, je compte le re-créer en Vue.JS à partir de février 2021</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card">
+          <div class="card bg-dark text-light">
             <a href="https://kagescan.fr/fangame/"><img class="card-img-top" src="img/fangame.jpg" alt="Card image cap"></a>
             <div class="card-body">
-              <h5 class="card-title"><a href="https://kagescan.fr/fangame/">Retaining's Memories</a></h1>
-                <p class="card-text">Un jeu de type "Visual Novel" traduit en diverses langues (FR, EN, ES, DE...), créé en HTML5 et JavaScript DOM à l'aide de la librairie <a href="monogatari.io">Monogatari</a>.<br>
+              <h5 class="card-title"><a href="https://kagescan.fr/fangame/">Retaining's Memories</a></h5>
+                <p class="card-text">Un jeu de type "Visual Novel" traduit en diverses langues (FR, EN, ES, DE...), créé en HTML5 et JavaScript à l'aide de la librairie <a href="monogatari.io">Monogatari</a>.<br>
                 Ce projet a pour but de compiler les trames de chaque médias (musiques, roman, manga, dessin animé...) de la série "Kagerou Project" en un unique jeu, afin de faciliter la compréhension de l'oeuvre.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <div class="card">
+      <div class="col-md-12 col-xl-4 row justify-content-center">
+        <div class="col-md-8 col-lg-7 col-xl-12">
+          <div class="card bg-dark text-light">
             <a href="https://github.com/LoganTann/"><img class="card-img-top" src="img/github_more.png" alt="Card image cap"></a>
             <div class="card-body">
-              <h5 class="card-title">En voir plus sur <a href="https://github.com/LoganTann/">GitHub</a></h1>
+              <h5 class="card-title">Voir davantage sur <a href="https://github.com/LoganTann/">GitHub</a></h5>
               <p class="card-text">
                 Les projets présentés ici sont en état de "perpétuelle évolution", fabriqués durant mon petit temps libre et qui seront toujours maintenus.
                 Mon github regorge de projets de plus petite envergure, tel que des projets scolaires, des logiciels utilitaires ou des mini-jeux.
@@ -141,11 +134,42 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <section id="contact" class="content-section bg-primary text-white">
+    <section id="menuDeLaccueil" class="container">
+      <div class="row content-section-heading text-center">
+        <div class="col s12">
+          <h3>Le reste du site</h3>
+          <h2 class="mb-5">En savoir plus...</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <a href="competences.html" class="col-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="img/competences.jpg" alt="">
+            <h4 class="card-body">Compétances</h4>
+          </div>
+        </a>
+
+        <a href="loisirs.html" class="col-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="img/loisirs.jpg" alt="">
+            <h4 class="card-body">Loisirs</h4>
+          </div>
+        </a>
+
+        <a href="experiences.html" class="col-4">
+          <div class="card text-center">
+            <img class="card-img-top" src="img/experience.png" alt="">
+            <h4 class="card-body">Expériences</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section text-white">
       <div class="content-section-heading text-center">
           <h3>Me contacter</h3>
           <h2 class="mb-5">Formlaire de contact</h2>
@@ -187,14 +211,14 @@
             <input id="mail" name="mail" placeholder="mail@exemple.com" type="text" class="form-control">
           </div>
           <div class="col-3 col-md-5 text-right">
-            <button name="submit" type="submit" class="btn btn-primary">Envoyer !</button>
+            <button name="submit" type="submit" class="btn bg-light text-dark">Envoyer !</button>
           </div>
         </div>
       </form>
     </section>
 
     <footer class="footer row">
-      <div class="col-5 offset-3 col-md-3 offset-md-2">
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <h3>Contact</h3>
         <ul class="sansPuce">
           <li><i class="fa fa-envelope mr-3"></i> logan@kagescan.fr</li>
@@ -203,9 +227,18 @@
           <li><i class="fab fa-youtube mr-3"></i> <a href="https://www.youtube.com/c/KagescanFr">/KagescanFr</a></li>
         </ul>
       </div>
-      <div class="col-8 offset-1 col-md-4">
+      <div class="col-sm-6 col-md-5 col-lg-4 offset-lg-1">
         <p>Ce site a été conçu en tant que projet universitaire. Cette page web se doit donc de respecter le cahier des charges et certaines méthodes de développement.</p>
         <p class="text-center"><img src="img/u-paris-white.png" class="img-fluid" style="width: 300px;"></p>
+      </div>
+
+      <div class="col-sm-12 col-md-3 offset-lg-1 text-center">
+        <h3>Credits image sur cette page: </h3>
+        Illustration accueil par Moi-même<br>
+        Autres illustrations : www.freepik.com<br>
+          <a href='https://www.freepik.com/vectors/business'>Business vector created by upklyak</a><br>
+          <a href="https://www.freepik.com/vectors/people">People vector created by pikisuperstar</a>
+          <a href="https://www.freepik.com/vectors/glasses">Glasses vector created by pikisuperstar</a>
       </div>
       <div class="col-12 text-center mt-3">
         <a href="#header" title="Aller en haut de page"><i class="fa fa-angle-up"></i> Retourner en haut de la page <i class="fa fa-angle-up"></i></a>
