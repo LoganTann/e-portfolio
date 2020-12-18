@@ -189,6 +189,7 @@ section {
    text-align: center;
    empty-cells: hide;
    overflow-x: auto;
+   min-width: 80em;
 }
 .table td {
   vertical-align: middle;
@@ -197,6 +198,9 @@ section {
 }
 .table td:empty {
   background: white;
+}
+.scrollable {
+  overflow-x: auto;
 }
 a h4 {
   color: black;
