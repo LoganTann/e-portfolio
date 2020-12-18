@@ -147,7 +147,7 @@ nav {
   right: 10vw;
 }
 
-section {
+section, article {
   padding: 7rem 0;
 }
 
