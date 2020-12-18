@@ -8,6 +8,7 @@ body {
   background: linear-gradient(200deg, #aa690d 0%, #8d2a00 60%, #570b04 100%);
 }
 
+/* Polices */
 #timeline_experience h4, #timeline_experience h3, nav li a {
   font-family: 'Saira Extra Condensed', 'Source Sans Pro', sans-serif;
 }
@@ -22,7 +23,10 @@ body {
 ul.sansPuce li, nav li {
   list-style: none;
 }
-/* effet du menu */
+
+
+
+/* MENU et ses effet ---------------------------------------------------------*/
 #view {
   background-color: white;
   /* force la vue à avoir l'ascenceur plutôt que la balise body : */
@@ -57,6 +61,12 @@ body.openMenu #menu-toggle {
   top: 0em;
   transform: translateY(-100%);
 }
+nav {
+  z-index: 1;
+  position: absolute;
+  top: 16%;
+  right: 10vw;
+}
 nav ul {
   padding: 0;
 }
@@ -85,35 +95,24 @@ nav>ul>li {
 nav>ul>li:hover { /* ne pas appliquer le upscale sur les sous-listes */
   transform: scale(1.1);
 }
-/* spécialement pour les écrans plus petits que 900px */
-@media (max-width: 600px) {
-  nav li {
-    font-size: 2rem;
-  }
-  body.openMenu nav {
-    right: 1em;
-  }
-}
 
-/* Header */
+/* BALISES natives ---------------------------------------------------------*/
 header {
   color: #d9d9d9;
-
   background-image:url('../img/main_bg.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-
+  /* Centre horizontalement et verticalement */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  min-height: 30em;
-
   position: relative;
   width: 100%;
   height: auto;
+  min-height: 30em;
   padding: 8rem 0;
 }
 
@@ -140,37 +139,23 @@ header h3 {
   color: inherit;
 }
 
-nav {
-  z-index: 1;
-  position: absolute;
-  top: 16%;
-  right: 10vw;
-}
-
 section, article {
   padding: 7rem 0;
 }
 
-/* Première section */
-#intro, #technos p, .card-text {
-  text-align: justify;
+
+footer.row {
+  /* obligation du .row pour définir une priorité + importante
+     par dessus bootstrap*/
+  background-color: #363636;
+  color: white;
+  padding-top: 2em;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
 }
-#technos {
-  text-align: center;
-}
-#technos .icone {
-  background: white;
-  color: #1d809f;
-  font-size: 3em;
-  width: 2em;
-  height: 2em;
-  margin: 0 auto 0.5em auto;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/* généraux : */
+
+/* classes générales : */
 .custom_card {
   margin-bottom: 1em;
   max-width: 95%;
@@ -205,7 +190,29 @@ section, article {
 a h4 {
   color: black;
 }
+.smallerHeader {
+  height: 30em;
+}
 
+/* Accueil et autres pages */
+#intro, #technos p, .card-text {
+  text-align: justify;
+}
+#technos {
+  text-align: center;
+}
+#technos .icone {
+  background: white;
+  color: #1d809f;
+  font-size: 3em;
+  width: 2em;
+  height: 2em;
+  margin: 0 auto 0.5em auto;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #menuDeLaccueil .card {
   overflow: hidden;
@@ -240,10 +247,6 @@ h4.card-body {
   margin: 0;
 }
 
-.smallerHeader {
-  height: 30em;
-}
-
 #timeline_experience h3{
   font-weight: 700;
   font-size: 2.5rem;
@@ -259,6 +262,8 @@ h4.card-body {
   color: #ba311c;
 }
 
+/* personnalisation selon la page courante (ex : background-image de l'header et
+   affichage gras de la page courante dans le menu)*/
 #page-competences header {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/competences.jpg');
 }
@@ -274,21 +279,20 @@ h4.card-body {
   font-weight: bold;
 }
 
-
-/* obligation du .row pour définir priorité + importante par dessus bootstrap*/
-footer.row {
-  background-color: #363636;
-  color: white;
-  padding-top: 2em;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-}
 #copyright {
   padding-top: 1rem;
   background-color: #2e2e2e;
   margin-top: 1rem;
 }
+
+/* MEDIA QUERIES ------------------------------------------------------------ */
+/* Etant donné la faible quantité de règles médias, j'ai préféré les garder dans
+   le fichier css commun plutôt que des fichiers distincs. En effet, chaque requête
+   prends un certain temps de charge, faire ce genre de media queries sur des fichiers
+   distincs va ralentir le chargement de la pages (qui est déjà publiée sur
+   https://logantann.github.io/e-portfolio), cela sera donc contre-productif
+*/
+
 /* spécialement pour les écrans plus grand que 900px */
 @media (min-width: 900px) {
   header {
@@ -300,5 +304,15 @@ footer.row {
 
   #intro {
     text-align: center;
+  }
+}
+
+/* spécialement pour les écrans plus petits que 900px */
+@media (max-width: 600px) {
+  nav li {
+    font-size: 2rem;
+  }
+  body.openMenu nav {
+    right: 1em;
   }
 }
