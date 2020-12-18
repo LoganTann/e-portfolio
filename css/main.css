@@ -1,9 +1,17 @@
+/* importe les polices*/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@300;400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   perspective: 1500px; /* utile pour l'animation du menu*/
   background: rgb(170,105,13);
   background: linear-gradient(200deg, #aa690d 0%, #8d2a00 60%, #570b04 100%);
 }
+
+#timeline_experience h4, #timeline_experience h3, nav li a {
+  font-family: 'Saira Extra Condensed', 'Source Sans Pro', sans-serif;
+}
+
 /* timing transition général */
 #menu-toggle, .card-img-top, h4.card-body {
   transition: all 0.5s;
@@ -60,7 +68,7 @@ nav li li {
 }
 nav li a {
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', 'Source Sans Pro', sans-serif;
+  font-weight: 400;
   color: white;
   padding: 0 1.5rem;
 }
@@ -176,6 +184,20 @@ section {
 .card.bg-dark a{
   color: #f0883e;
 }
+.table {
+   table-layout: fixed;
+   text-align: center;
+   empty-cells: hide;
+   overflow-x: auto;
+}
+.table td {
+  vertical-align: middle;
+  background: #FEE;
+  min-width: 4em;
+}
+.table td:empty {
+  background: white;
+}
 a h4 {
   color: black;
 }
@@ -218,6 +240,21 @@ h4.card-body {
   height: 30em;
 }
 
+#timeline_experience h3{
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: left;
+  color: black;
+}
+#timeline_experience h4{
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: #555;
+}
+#timeline_experience .date {
+  color: #ba311c;
+}
+
 #page-competences header {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/competences.jpg');
 }
@@ -232,6 +269,8 @@ h4.card-body {
 #page-loisirs a[href="loisirs.html"] {
   font-weight: bold;
 }
+
+
 /* obligation du .row pour définir priorité + importante par dessus bootstrap*/
 footer.row {
   background-color: #363636;
